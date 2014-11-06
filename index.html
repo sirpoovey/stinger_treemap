@@ -54,8 +54,23 @@
              colorMid="#d9b3e3"
              colorHigh="#e5e8bc"></div>
 
+    <div ng-repeat="tweetData in tweets" >
+        <div class="col-xs-6">
+            <div class="twitter-tweet">
+                <img src="{{ tweetData.profileimgurl }}"></img>
+                <p>
+                    {{ tweetData.body }}
+                </p>
+
+                -- {{ tweetData.username }}
+
+                (@{{ tweetData.displayname }})
+            </div>
+        </div>
+    </div>
 
 </div>
+
 
 </body>
 </html>

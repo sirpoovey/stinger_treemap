@@ -41,9 +41,17 @@ angular.module("StingerWidgetsApp",['angular-treemap']).controller('StingerViz',
         return name;
     };
 
+    $scope.tweets = [];
+
     $scope.onDetail = function(d) {
-        console.log(d);
-        return d;
+        var args = {};
+        var config = {};
+        $http.get('http://' + window.location.hostname + ':5000/user/' + d.name,args,config)
+            .success(function(data, status, headers, config) {
+                $scope.tweets = data;
+            }).error(function(data,status,headers,config) {
+                console.log('Damnit');
+            });
     }
 
     $scope.items = [

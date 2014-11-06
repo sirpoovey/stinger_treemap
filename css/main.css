@@ -19,3 +19,30 @@ form {
     position: absolute;
     text-indent: 2px;
 }
+
+div.twitter-tweet {
+    display: inline-block;
+    padding: 16px;
+    margin: 5px 0;
+    max-width: 480px;
+
+    border: #ddd 1px solid;
+    border-top-color: #eee;
+    border-bottom-color: #bbb;
+    border-radius: 5px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.15);
+
+    font: bold 14px/18px Helvetica, Arial, sans-serif;
+    color: #000;
+}
+
+div.twitter-tweet p {
+    font: normal 14px/18px Georgia, "Times New Roman", Palatino, serif;
+    margin: 0 5px 10px 0;
+}
+
+div.twitter-tweet a[href^="https://twitter.com"] {
+    font-weight: normal;
+    color: #666;
+    font-size: 12px;
+}
