@@ -1,0 +1,21 @@
+.angular-treemap text {
+  pointer-events: none; }
+.angular-treemap .grandparent text {
+  font-weight: bold; }
+.angular-treemap rect {
+  stroke: #fff; }
+.angular-treemap rect.parent,
+.angular-treemap .grandparent rect {
+  stroke-width: 2px; }
+.angular-treemap .grandparent rect {
+  fill: #fff; }
+.angular-treemap .children rect.parent,
+.angular-treemap .grandparent rect {
+  cursor: pointer; }
+.angular-treemap rect.parent {
+  pointer-events: all; }
+.angular-treemap .children:hover rect.child,
+.angular-treemap .grandparent:hover rect {
+  fill: #aaa; }
+
+/*# sourceMappingURL=angular-treemap.css.map */

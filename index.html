@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="StingerWidgetsApp">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Conversation Viewer</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+
+    <link type="text/css" rel="stylesheet" href="css/jquery-ui.css">
+    <link type="text/css" rel="stylesheet" href="css/angular-treemap.css">
+    <link type="text/css" rel="stylesheet" href="css/main.css">
+
+    <script src="js/d3.v3.min.js"></script>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+
+    <script src="js/underscore-min.js"></script>
+    <script src="js/angular.min.js"></script>
+
+    <script type="text/javascript" src="js/ui-bootstrap-tpls.js"></script>
+    <script type="text/javascript" src="js/angular-ui/ui-utils.js"></script>
+    <script type="text/javascript">
+        var app = angular.module("StingerWidgetsApp", ['ui.utils','ui.bootstrap']);
+    </script>
+
+    <script tye="text/javascript" src="js/angular-treemap.js"></script>
+    <script tye="text/javascript" src="js/controllers/StingerViz.js"></script>
+</head>
+<body>
+
+<div ng-controller="StingerViz">
+
+    <select ng-model="algorithm" ng-options="item as item.name for item in items"></select>
+
+
+        <div treemap="treeData"
+             name="formatName(name)"
+             detail="onDetail(node)"
+             colorLow="#bccbe8"
+             colorMid="#d9b3e3"
+             colorHigh="#e5e8bc"></div>
+
+
+</div>
+
+</body>
+</html>
