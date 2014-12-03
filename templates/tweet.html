@@ -1,0 +1,15 @@
+<div ng-hide="tweetData">
+    <a href="#">Load Tweet externally</a>
+</div>
+
+<div ng-show="tweetData">
+    <div class="twitter-tweet">
+        <p>
+            {{ tweetData.body }}
+        </p>
+
+            -- {{ tweetData.username }}
+
+            (@{{ tweetData.displayname }})
+    </div>
+</div>
